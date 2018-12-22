@@ -385,6 +385,12 @@ declare namespace Knex {
         options: any;
         bindings: Value[];
         sql: string;
+        toNative(): SqlNative;
+    }
+
+    interface SqlNative {
+        bindings: Value[];
+        sql: string;
     }
 
     //
